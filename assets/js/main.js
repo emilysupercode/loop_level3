@@ -87,3 +87,37 @@ function loopDeLoop(event) {
 // ==================================
 // lvl 3_4
 // ==================================
+
+
+let maxNumberEl = document.getElementById("maxNumber");
+let firstDivisorEl = document.getElementById("firstDivisor");
+let secondDivisorEl = document.getElementById("secondDivisor");
+
+function addAll(event) {
+    event.preventDefault();
+
+    let maxNumberVal = Number(maxNumberEl.value);
+    let firstDivisorVal = Number(firstDivisorEl.value);
+    let secondDivisorVal = Number(secondDivisorEl.value);
+    let totalAddedValue = document.getElementById("outputNumber");
+
+    for (let i = 1; i <= maxNumberVal; i++) {
+        if (i % firstDivisorVal === 0) {
+            console.log(i)
+            totalAddedValue.innerHTML = Number(totalAddedValue.innerHTML) + i;
+        } else if (i % secondDivisorVal === 0) {
+            console.log(i)
+            totalAddedValue.innerHTML = Number(totalAddedValue.innerHTML) + i;
+        }
+    }
+
+    if (maxNumberVal <= 0) {
+        alert("You must select a maximum number greater than zero.");
+    }
+
+    if (firstDivisorVal === secondDivisorVal) {
+        alert("Please select two different divisors.")
+    }
+}
+
+/// fix so that output is a number

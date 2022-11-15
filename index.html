@@ -10,13 +10,54 @@
 </head>
 
 <body>
+    <h1>Loop exercises, lvl 1-3</h1>
+    <h2>exercise 3_1: visible in console</h2>
+    <hr>
+    <h2>exercise 3_2</h2>
     <p id="output"></p>
     <hr>
+    <h2>exercise 3_3</h2>
     <form>
         <input type="number" id="numberInput">
         <input type="button" value="Loop Me" id="loopButton">
     </form>
     <p id="outputLoop"></p>
+    <hr>
+    <h2>exercise 3_4</h2>
+    <h3>Pick a number, any number</h3>
+    <p>Input a number as your "maximum". Then choose two numbers from the drop down list. I will return the total
+        value of all numbers between 0 and your chosen maximum for which one of the two drop down selects is a
+        divisor leaving no remainder. </p>
+    <form class="exercise3_4">
+        <label for="maxNumber">Maximum number</label> <br>
+        <input type="number" id="maxNumber"><br>
+        <label for="firstDivisor">First divisor</label><br>
+        <select required name="firstDivisor" id="firstDivisor">
+            <option disabled selected>select a number</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select> <br>
+        <label for="secondDivisor">Second divisor</label><br>
+        <select required name="secondDivisor" id="secondDivisor">
+            <option disabled selected>select a number</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <button type="button" onclick="addAll(event)">Add me up</button>
+    </form>
+    <p id="outputNumber"></p>
     <script src="./assets/js/main.js"></script>
 </body>
 
