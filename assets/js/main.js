@@ -119,5 +119,3 @@ function addAll(event) {
         alert("Please select two different divisors.")
     }
 }
-
-/// fix so that output is a number
